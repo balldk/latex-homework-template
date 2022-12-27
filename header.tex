@@ -1,0 +1,80 @@
+% ============ Import Library ============
+% Apply template
+\documentclass[a4paper,oneside]{article}
+% Using vietnamese
+\usepackage[utf8]{vietnam}
+\usepackage[vietnamese=nohyphenation]{hyphsubst}
+\usepackage[vietnamese]{babel}
+\usepackage[utf8]{inputenc}
+% Some essential libs for math
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{mathtools}
+\usepackage{cases}
+\usepackage{commath}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+% Essential libs for paper format
+\usepackage{graphicx}
+\usepackage{scrextend}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[explicit]{titlesec}
+% Others
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{tikz, tcolorbox}
+% Font style
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+
+% ============ Configs ============
+% paper formats
+\changefontsizes{12pt}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textheight}{9.25in}
+\renewcommand{\baselinestretch}{1.2}
+\titlespacing{\section}{0pt}{12pt}{2pt}
+\DeclareTextFontCommand{\textbfit}{\bfseries\itshape}
+\setlength{\parindent}{0pt}
+% Define commands
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\newcommand{\nl}{\\[1.5mm]}
+\newcommand{\nll}{\\[2.0mm]}
+\newcommand{\nlll}{\\[3.0mm]}
+\newcommand{\dlim}{\displaystyle\lim}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\DeclareMathOperator{\Ima}{Im}
+% QED
+\newcommand*{\QED}[1][$\square$]{%
+    \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+    \quad\hbox{#1}%
+}
+\newcommand*{\QEDFill}{\null\nobreak\hfill\ensuremath{\blacksquare}}
+% \newcommand{\startproof}{\begin{center}Giải\end{center}}
+\newcommand{\startproof}{\vspace{-7pt}\noindent\textit{Chứng minh.}\enspace}
+
+\makeatletter
+\newenvironment{sqcases}{%
+    \matrix@check\sqcases\env@sqcases
+}{%
+    \endarray\right.%
+}
+\def\env@sqcases{%
+\let\@ifnextchar\new@ifnextchar
+\left\lbrack
+\def\arraystretch{1.2}%
+\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Bài}
+
+% ============ Meta data ============
+\title{\textbf{Bài tập Giải tích 2 - Chương 1}}
+\author{Nguyễn Đình Đăng Khoa (MSSV: 20110217)}
+\date{\today}

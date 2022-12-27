@@ -1,0 +1,43 @@
+\input{header}
+
+% ============ Content ============
+\begin{document}
+\maketitle
+
+\begin{exercise}
+    Xét tính liên tục của hàm $f$ được định nghĩa bởi
+    $$
+        f(x) =
+        \begin{cases}
+            \dfrac{\sin^2 x}{x^2}, & x \neq 0 \\
+            1,                     & x = 0
+        \end{cases}
+    $$
+\end{exercise}
+\startproof
+You \textbfit{should} start to write some proves here, the following equations and symbols are just demo and not a real proves for anything.
+\begin{align*}
+    \displaystyle\lim_{x\to0} f(x)
+    = & \lim_{x\to0} \dfrac{\sin^2 x}{x^2}
+    = \lim_{x\to0} \left(\dfrac{\sin x}{x} \cdot \dfrac{\sin x}{x}\right)                             \\[1.5mm]
+    = & \lim_{x\to0} \left(\dfrac{\sin x}{x}\right) \cdot \lim_{x\to0} \left(\dfrac{\sin x}{x}\right) \\
+    = & \ 1 \cdot 1 = 1
+\end{align*}
+$\Rightarrow \displaystyle\lim_{x\to0} f(x) = f(0) = 1$.\\[1.5mm]
+$\Rightarrow f$ liên tục tại x = 0.\\
+Mặt khác, nếu $x \neq 0$ thì $f(x) = \dfrac{\sin^2 x}{x^2}$ xác định trên $\R$.\\[1.5mm]
+Vậy $f$ liên tục trên $\R$.\QED
+
+\begin{exercise}
+    Cho đồng cấu nhóm cộng $f: \Q\longrightarrow\Z$. Chứng minh rằng với $n\in\N^*, f(1) = nf\left(\dfrac{1}{n}\right)$.
+\end{exercise}
+\startproof
+Cho $n\in\N^*$, khi đó
+\[
+    f(1)=f\left(\dfrac{n}{n}\right)
+    =f\left(\smash[b]{\underbrace{\dfrac{1}{n}+\dfrac{1}{n}+\cdots+\dfrac{1}{n}}_\text{n lần}}\right)
+    =\smash[b]{\underbrace{f\left(\dfrac{1}{n}\right)+f\left(\dfrac{1}{n}\right)+\cdots+f\left(\dfrac{1}{n}\right)}_\text{n lần}}
+    = nf\left(\dfrac{1}{n}\right)
+\]\QEDFill
+
+\end{document}
